@@ -1,0 +1,44 @@
+.contenedor {
+    width: auto;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
+    
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header {
+    background-color: whitesmoke;
+    color: black;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+}
+
+.contenedor .contenido {
+    grid-area: 2/1/4/3;;
+    text-align: justify;
+}
+
+.contenedor .sidebar {
+    grid-column: 3 / 4;
+    background: orange;
+}
+
+.contenedor .footer {
+    background-color: aquamarine;
+    grid-area: 4/1/5/-1;
+    text-align: center;
+}
